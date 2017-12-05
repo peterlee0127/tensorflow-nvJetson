@@ -8,16 +8,14 @@ Tensorflow for Nvidia TX1/TX2
 2. CUDA 8.0			
 3. Python 2.7				
 
-Tensorflow 1.3.0 aarch64
-Tensorflow 1.4.1 aarch64
 
 
 ### Install
-For 1.3.0
-```$ sudo pip install tensorflow-1.3.0-cp27-cp27mu-linux_aarch64.whl```
-
-For 1.4.1
+Tensorflow 1.4.1		
 ```$ sudo pip install tensorflow-1.4.1-cp27-cp27mu-linux_aarch64.whl```
+
+Tensorflow 1.3.0		
+```$ sudo pip install tensorflow-1.3.0-cp27-cp27mu-linux_aarch64.whl```
 
 ### Output of the test code
 ```
