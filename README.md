@@ -1,14 +1,14 @@
-# tensorflow-TX1/TX2
-Tensorflow for Nvidia TX1/TX2
+# tensorflow-nvJetson
+Tensorflow for Nvidia Jetson TX1/TX2
 
 
-## Nvidia TX 1/2 Environment
+## Nvidia Jetson
 #### JetPack 3.1 
 1. cuDNN 6.0			
 2. CUDA 8.0			
 3. Python 2.7				
 
-
+#### JetPack 3.2 DP still in works
 
 ### Install
 Tensorflow 1.4.1		
