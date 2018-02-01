@@ -9,6 +9,10 @@ Tensorflow for Nvidia Jetson TX1/TX2
 3. Python 2.7				
 
 #### JetPack 3.2 DP still in works
+Testing: Tensorflow 1.5.
+1. cuDNN 7.0			
+2. CUDA 9.0			
+3. Python 2.7	
 
 ### Install
 Tensorflow 1.4.1		
