@@ -3,16 +3,34 @@ Tensorflow for Nvidia Jetson TX1/TX2
 
 
 ## Nvidia Jetson
-#### JetPack 3.1 
+#### JetPack 3.1, Tensorflow 1.4
 1. cuDNN 6.0			
 2. CUDA 8.0			
 3. Python 2.7				
 
-#### JetPack 3.2 DP still in works
+#### JetPack 3.2 DP, Tensorflow 1.5
 Testing: Tensorflow 1.5.
 1. cuDNN 7.0			
 2. CUDA 9.0			
 3. Python 2.7	
+
+If you had this Memory Error.
+
+```
+2018-02-23 16:45:13.345534: W ./tensorflow/core/common_runtime/gpu/pool_allocator.h:195] could not allocate pinned host memory of size: 267264.  
+2018-02-23 16:45:13.345585: E tensorflow/stream_executor/cuda/cuda_driver.cc:967] failed to alloc 240640 bytes on host: CUDA_ERROR_UNKNOWN.   
+2018-02-23 16:45:13.345634: W ./tensorflow/core/common_runtime/gpu/pool_allocator.h:195] could not allocate pinned host memory of size: 240640.   
+2018-02-23 16:45:13.345683: E tensorflow/stream_executor/cuda/cuda_driver.cc:967] failed to alloc 216576 bytes on host: CUDA_ERROR_UNKNOWN.   
+```
+You can modify your tensorflow program.
+It should works.
+
+```
+config = tf.ConfigProto()
+config.gpu_options.allow_growth = True
+
+session = tf.Session(config=config, ...)
+```
 
 ### Install
 Tensorflow 1.4.1		
