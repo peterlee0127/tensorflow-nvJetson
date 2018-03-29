@@ -3,9 +3,18 @@ TensorFlow for Nvidia Jetson TX1/TX2
 
 
 ## Nvidia Jetson
+
+#### JetPack 3.2, TensorFlow 1.7
+2018 3/29.  
+
+1. cuDNN 7.0			
+2. CUDA 9.0			
+3. Python 2.7	
+
+This package build with tensorRT.
 		
 #### JetPack 3.2, TensorFlow 1.6
-Testing: TensorFlow 1.6.
+
 1. cuDNN 7.0			
 2. CUDA 9.0			
 3. Python 2.7	
@@ -13,7 +22,7 @@ Testing: TensorFlow 1.6.
 This package didn't build with tensorRT.
 
 #### JetPack 3.2, TensorFlow 1.5
-Testing: TensorFlow 1.5.
+
 1. cuDNN 7.0			
 2. CUDA 9.0			
 3. Python 2.7	
@@ -34,19 +43,15 @@ config = tf.ConfigProto()
 config.gpu_options.allow_growth = True
 
 session = tf.Session(config=config, ...)
-```
-#### JetPack 3.1, Tensorflow 1.4
-1. cuDNN 6.0			
-2. CUDA 8.0			
-3. Python 2.7		
+```	
 
 
 ### Install
-Tensorflow 1.6.0	    
-```$ sudo pip install tensorflow-1.6.0-cp27-cp27mu-linux_aarch64.whl```
+Tensorflow 1.7.0	    
+```$ sudo pip install tensorflow-1.7.0-cp27-cp27mu-linux_aarch64.whl```
 
-Tensorflow 1.5.0   
-```$ sudo pip install tensorflow-1.5.0-cp27-cp27mu-linux_aarch64.whl```
+Tensorflow 1.6.0   
+```$ sudo pip install tensorflow-1.6.0-cp27-cp27mu-linux_aarch64.whl```
 
 ### Output of the test code
 ```
