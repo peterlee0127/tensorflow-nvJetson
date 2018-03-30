@@ -2,9 +2,19 @@
 TensorFlow for Nvidia Jetson TX1/TX2
 
 
+
+Due to tensorflow 1.7 is larger than 100MB. I split the whl file to 2 part. Please use following command to merge file.
+
+### merge file
+```$ cat tensorflow-1.7.0-cp27-cp27mu-linux_aarch64.whl.part-* > tensorflow-1.7.0-cp27-cp27mu-linux_aarch64.whl```
+
+### split file
+```$  split -b 70m tensorflow-1.7.0-cp27-cp27mu-linux_aarch64.whl tensorflow-1.7.0-cp27-cp27mu-linux_aarch64.whl-part-```
+
+<hr>
 ## Nvidia Jetson
 
-#### JetPack 3.2, TensorFlow 1.7
+### JetPack 3.2, TensorFlow 1.7  (Latest)
 2018 3/29.  
 
 1. cuDNN 7.0			
