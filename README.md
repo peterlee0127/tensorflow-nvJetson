@@ -1,9 +1,10 @@
 # tensorflow-nvJetson
-TensorFlow for Nvidia Jetson TX1/TX2
+TensorFlow for Nvidia Jetson TX1/TX2.   
 
+P.S. I recommend to donwload needed file, not use git clone. Using git clone will download all file in this repository.   
 
-
-Due to tensorflow 1.7 is larger than 100MB. I split the whl file to 2 part. Please use following command to merge file.
+<hr>
+Tensorflow 1.7(build with TensorRT) is larger than 100MB. I split the whl file to 2 part. Please use following command to merge file.
 
 ### merge file
 ```$ cat tensorflow-1.7.0-cp27-cp27mu-linux_aarch64.whl.part-* > tensorflow-1.7.0-cp27-cp27mu-linux_aarch64.whl```
