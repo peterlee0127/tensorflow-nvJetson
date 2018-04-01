@@ -1,0 +1,28 @@
+diff --git a/configure.py b/configure.py
+index d14edef..47cebc5 100644
+--- a/configure.py
++++ b/configure.py
+@@ -40,7 +40,7 @@ _DEFAULT_CUDA_PATH = '/usr/local/cuda'
+ _DEFAULT_CUDA_PATH_LINUX = '/opt/cuda'
+ _DEFAULT_CUDA_PATH_WIN = ('C:/Program Files/NVIDIA GPU Computing '
+                           'Toolkit/CUDA/v%s' % _DEFAULT_CUDA_VERSION)
+-_DEFAULT_TENSORRT_PATH_LINUX = '/usr/lib/x86_64-linux-gnu'
++_DEFAULT_TENSORRT_PATH_LINUX = '/usr/lib/%s-linux-gnu' % platform.machine()
+ _TF_OPENCL_VERSION = '1.2'
+ _DEFAULT_COMPUTECPP_TOOLKIT_PATH = '/usr/local/computecpp'
+ _DEFAULT_TRISYCL_INCLUDE_DIR = '/usr/local/triSYCL/include'
+diff --git a/third_party/tensorrt/tensorrt_configure.bzl b/third_party/tensorrt/tensorrt_configure.bzl
+index 8e76e5d..9b94650 100644
+--- a/third_party/tensorrt/tensorrt_configure.bzl
++++ b/third_party/tensorrt/tensorrt_configure.bzl
+@@ -57,6 +57,10 @@ def _find_trt_header_dir(repository_ctx, trt_install_path):
+     path = "/usr/include/x86_64-linux-gnu"
+     if _headers_exist(repository_ctx, path):
+       return path
++  if trt_install_path == "/usr/lib/aarch64-linux-gnu":
++    path = "/usr/include/aarch64-linux-gnu"
++    if _headers_exist(repository_ctx, path):
++      return path
+   path = str(repository_ctx.path("%s/../include" % trt_install_path).realpath)
+   if _headers_exist(repository_ctx, path):
+     return path
