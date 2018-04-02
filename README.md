@@ -46,7 +46,9 @@ This package didn't build with tensorRT.
 2. CUDA 9.0			
 3. Python 2.7	
 
-If you had this Memory Error.
+<hr>
+
+####If you had this kind of Memory Error.
 
 ```
 2018-02-23 16:45:13.345534: W ./tensorflow/core/common_runtime/gpu/pool_allocator.h:195] could not allocate pinned host memory of size: 267264.  
