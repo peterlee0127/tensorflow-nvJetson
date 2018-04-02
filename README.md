@@ -13,6 +13,14 @@ Tensorflow 1.7(build with TensorRT) is larger than 100MB. I split the whl file t
 ```$  split -b 70m tensorflow-1.7.0-cp27-cp27mu-linux_aarch64.whl tensorflow-1.7.0-cp27-cp27mu-linux_aarch64.whl-part-```
 
 <hr>
+
+## TensorRT
+[Using TensorRT in TensorFlow](https://github.com/tensorflow/tensorflow/blob/r1.7/tensorflow/contrib/tensorrt/README.md)
+
+[Install  uff exporter for Jetson](https://github.com/NVIDIA-Jetson/tf_to_trt_image_classification#install)
+
+
+
 ## Nvidia Jetson
 
 ### JetPack 3.2, TensorFlow 1.7  (Latest)
