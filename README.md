@@ -161,3 +161,5 @@ totalMemory: 7.67GiB freeMemory: 1.83GiB
 2018-04-02 11:25:23.703567: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1041] Created TensorFlow device (/job:localhost/replica:0/task:0/device:GPU:0 with 3926 MB memory) -> physical GPU (device: 0, name: NVIDIA Tegra X2, pci bus id: 0000:00:00.0, compute capability: 6.2)
 Pass
 ```
+
+<a href="https://buymeacoff.ee/iaY28Qg">Buy me a coffee</a>
