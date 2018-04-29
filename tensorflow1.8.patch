@@ -1,0 +1,12 @@
+diff --git a/third_party/png.BUILD b/third_party/png.BUILD
+index 76ab32d..bc4551a 100644
+--- a/third_party/png.BUILD
++++ b/third_party/png.BUILD
+@@ -35,6 +35,7 @@ cc_library(
+     ],
+     includes = ["."],
+     linkopts = ["-lm"],
++    copts = ["-DPNG_ARM_NEON_OPT=0"],
+     visibility = ["//visibility:public"],
+     deps = ["@zlib_archive//:zlib"],
+ )
