@@ -23,6 +23,15 @@ Tensorflow 1.7(build with TensorRT) is larger than 100MB. I split the whl file t
 
 ## Nvidia Jetson
 
+### JetPack 3.2, TensorFlow 1.8rc1  
+2018 4/29.  
+
+1. cuDNN 7.0			
+2. CUDA 9.0			
+3. Python 2.7	
+
+This package build with tensorRT.
+
 ### JetPack 3.2, TensorFlow 1.7  (Latest)
 2018 3/29.  
 
