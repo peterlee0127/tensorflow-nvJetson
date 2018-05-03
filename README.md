@@ -1,6 +1,22 @@
 # tensorflow-nvJetson
 TensorFlow for Nvidia Jetson TX1/TX2.   
 
+
+## Install Latest Build of Tensorflow 
+
+#### Install by curl
+
+```
+sh -c "$(curl -fsSL https://tfjetson.peterlee0127.com/installTF.sh)"
+```
+#### Install by wget
+```
+sh -c "$(wget https://tfjetson.peterlee0127.com/installTF.sh -O -)"
+```
+
+This script will download lastest build tensorflow in this repository.
+
+
 P.S. I recommend to donwload needed file, not use git clone. Using git clone will download all file in this repository.   
 
 <hr>
