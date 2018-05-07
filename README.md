@@ -48,7 +48,7 @@ Tensorflow 1.7(build with TensorRT) is larger than 100MB. I split the whl file t
 
 This package build with tensorRT.
 
-### JetPack 3.2, TensorFlow 1.7  (Latest)
+#### JetPack 3.2, TensorFlow 1.7
 2018 3/29.  
 
 1. cuDNN 7.0			
