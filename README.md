@@ -5,7 +5,7 @@ TensorFlow for Nvidia Jetson TX1/TX2.
 ## Install Latest Build of Tensorflow 
 
 ## Install at Release
-###[Release Page](https://github.com/peterlee0127/tensorflow-nvJetson/releases)
+### You can download wheel file at  [Release Page](https://github.com/peterlee0127/tensorflow-nvJetson/releases)
 
 
 #### Install by curl
