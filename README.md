@@ -6,7 +6,7 @@ TensorFlow for Nvidia Jetson TX1/TX2.
 ## Install Latest Build of Tensorflow 
 
 ## Install at Release
-### You can download wheel file at  [Release Page](https://github.com/peterlee0127/tensorflow-nvJetson/releases)
+### You can download wheel file at [Release Page](https://github.com/peterlee0127/tensorflow-nvJetson/releases)
 
 
 #### Install by curl
@@ -24,16 +24,7 @@ This script will download lastest build tensorflow in this repository.
 
 P.S. I recommend to donwload needed file, not use git clone. Using git clone will download all file in this repository.   
 
-<hr>
-Tensorflow 1.7(build with TensorRT) is larger than 100MB. I split the whl file to 2 part. Please use following command to merge file.
 
-### merge file
-```$ cat tensorflow-1.7.0-cp27-cp27mu-linux_aarch64.whl.part-* > tensorflow-1.7.0-cp27-cp27mu-linux_aarch64.whl```
-
-### split file
-```$  split -b 70m tensorflow-1.7.0-cp27-cp27mu-linux_aarch64.whl tensorflow-1.7.0-cp27-cp27mu-linux_aarch64.whl-part-```
-
-<hr>
 
 ## TensorRT
 [Using TensorRT in TensorFlow](https://github.com/tensorflow/tensorflow/blob/r1.7/tensorflow/contrib/tensorrt/README.md)
@@ -191,5 +182,22 @@ totalMemory: 7.67GiB freeMemory: 1.83GiB
 2018-04-02 11:25:23.703567: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1041] Created TensorFlow device (/job:localhost/replica:0/task:0/device:GPU:0 with 3926 MB memory) -> physical GPU (device: 0, name: NVIDIA Tegra X2, pci bus id: 0000:00:00.0, compute capability: 6.2)
 Pass
 ```
+<hr>
+Tensorflow 1.7(build with TensorRT) is larger than 100MB. I split the whl file to 2 part. Please use following command to merge file.
 
-<a href="https://buymeacoff.ee/iaY28Qg">Buy me a coffee</a>
+### merge file
+```$ cat tensorflow-1.7.0-cp27-cp27mu-linux_aarch64.whl.part-* > tensorflow-1.7.0-cp27-cp27mu-linux_aarch64.whl```
+
+### split file
+```$  split -b 70m tensorflow-1.7.0-cp27-cp27mu-linux_aarch64.whl tensorflow-1.7.0-cp27-cp27mu-linux_aarch64.whl-part-```
+
+<hr>
+### Install System on SSD (Solid State Disk)
+You can find information at jetsonhacks.   
+[jetsonhacks-install-samsung-ssd-on-nvidia-jetson-tx1](http://www.jetsonhacks.com/2017/01/28/install-samsung-ssd-on-nvidia-jetson-tx1/)
+
+
+
+<hr>
+
+<style>.bmc-button img{width: 27px !important;margin-bottom: 1px !important;box-shadow: none !important;border: none !important;vertical-align: middle !important;}.bmc-button{line-height: 36px !important;height:37px !important;text-decoration: none !important;display:inline-flex !important;color:#FFFFFF !important;background-color:#FF813F !important;border-radius: 3px !important;border: 1px solid transparent !important;padding: 1px 9px !important;font-size: 23px !important;letter-spacing: 0.6px !important;box-shadow: 0px 1px 2px rgba(190, 190, 190, 0.5) !important;-webkit-box-shadow: 0px 1px 2px 2px rgba(190, 190, 190, 0.5) !important;margin: 0 auto !important;font-family:'Cookie', cursive !important;-webkit-box-sizing: border-box !important;box-sizing: border-box !important;-o-transition: 0.3s all linear !important;-webkit-transition: 0.3s all linear !important;-moz-transition: 0.3s all linear !important;-ms-transition: 0.3s all linear !important;transition: 0.3s all linear !important;}.bmc-button:hover, .bmc-button:active, .bmc-button:focus {-webkit-box-shadow: 0px 1px 2px 2px rgba(190, 190, 190, 0.5) !important;text-decoration: none !important;box-shadow: 0px 1px 2px 2px rgba(190, 190, 190, 0.5) !important;opacity: 0.85 !important;color:#FFFFFF !important;}</style><link href="https://fonts.googleapis.com/css?family=Cookie" rel="stylesheet"><a class="bmc-button" target="_blank" href="https://www.buymeacoffee.com/iaY28Qg"><img src="https://www.buymeacoffee.com/assets/img/BMC-btn-logo.svg" alt="Buy me a coffee"><span style="margin-left:5px">Buy me a coffee</span></a>
