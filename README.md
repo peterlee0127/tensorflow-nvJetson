@@ -5,6 +5,22 @@ TensorFlow for Nvidia Jetson TX1/TX2.
 
 ## Install Latest Build of Tensorflow 
 
+## Setup Environment
+```
+# Setting in .bashrc or .zshrc or other bash
+export PATH=/usr/local/cuda/bin:$PATH
+export LD_LIBRARY_PATH=/usr/local/cuda/lib64:$LD_LIBRARY_PATH
+
+#sudo apt-get install libcupti-doc
+export LD_LIBRARY_PATH=/usr/local/cuda/extras/CUPTI/lib64:$LD_LIBRARY_PATH
+```
+
+### Instal pip
+```
+$ wget https://bootstrap.pypa.io/get-pip.py -o get-pip.py
+$ sudo python get-pip.py
+```
+
 ## Install at Release
 ### You can download wheel file at [Release Page](https://github.com/peterlee0127/tensorflow-nvJetson/releases)
 
@@ -192,9 +208,12 @@ Tensorflow 1.7(build with TensorRT) is larger than 100MB. I split the whl file t
 ```$  split -b 70m tensorflow-1.7.0-cp27-cp27mu-linux_aarch64.whl tensorflow-1.7.0-cp27-cp27mu-linux_aarch64.whl-part-```
 
 <hr>
+
 ### Install System on SSD (Solid State Disk)
-You can find information at jetsonhacks.   
-[jetsonhacks-install-samsung-ssd-on-nvidia-jetson-tx1](http://www.jetsonhacks.com/2017/01/28/install-samsung-ssd-on-nvidia-jetson-tx1/)
+
+You can find information at jetsonhacks.
+
+[jetsonhacks-install-samsung-ssd-on-nvidia-jetson-tx1](http://www.jetsonhacks.com/2017/01/28/install-samsung-ssd-on-nvidia-jetson-tx1)
 
 
 
