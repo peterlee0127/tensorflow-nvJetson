@@ -1,8 +1,6 @@
 #! /bin/sh
 FILE=tensorflow-1.8.0-cp27-cp27mu-linux_aarch64.whl
-wget https://tfjetson.peterlee0127.com/release/$FILE-part-1
-wget https://tfjetson.peterlee0127.com/release/$FILE-part-2
+wget https://github.com/peterlee0127/tensorflow-nvJetson/releases/download/1.8/tensorflow-1.8.0-cp27-cp27mu-linux_aarch64.whl
 
-cat $FILE-part-* > $FILE
 
 echo "you can install by 'sudo pip install $FILE'"

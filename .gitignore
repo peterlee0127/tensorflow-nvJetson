@@ -1,3 +1,4 @@
 temp/*
 _site/*
 .sass-cache/*
+release/*
