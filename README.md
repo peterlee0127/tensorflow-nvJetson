@@ -85,7 +85,7 @@ This package didn't build with tensorRT.
 
 <hr>
 
-####If you had this kind of Memory Error.
+#### If you had this kind of Memory Error.
 
 ```
 2018-02-23 16:45:13.345534: W ./tensorflow/core/common_runtime/gpu/pool_allocator.h:195] could not allocate pinned host memory of size: 267264.  
