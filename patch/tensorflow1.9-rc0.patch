@@ -1,0 +1,38 @@
+diff --git a/tensorflow/contrib/lite/kernels/internal/BUILD b/tensorflow/contrib/lite/kernels/internal/BUILD
+index 0a5223b..b7d8806 100644
+--- a/tensorflow/contrib/lite/kernels/internal/BUILD
++++ b/tensorflow/contrib/lite/kernels/internal/BUILD
+@@ -21,7 +21,6 @@ HARD_FP_FLAGS_IF_APPLICABLE = select({
+ NEON_FLAGS_IF_APPLICABLE = select({
+     ":arm": [
+         "-O3",
+-        "-mfpu=neon",
+     ],
+     ":armeabi-v7a": [
+         "-O3",
+diff --git a/tensorflow/contrib/lite/kernels/internal/optimized/depthwiseconv_uint8.h b/tensorflow/contrib/lite/kernels/internal/optimized/depthwiseconv_uint8.h
+index 3fd00c8..6eea465 100644
+--- a/tensorflow/contrib/lite/kernels/internal/optimized/depthwiseconv_uint8.h
++++ b/tensorflow/contrib/lite/kernels/internal/optimized/depthwiseconv_uint8.h
+@@ -1699,7 +1699,7 @@ inline void DepthwiseConv(const uint8* input_data, const Dims<4>& input_dims,
+ 
+ // Enable for arm64 except for the Nvidia Linux 4 Tegra (L4T) running on
+ // Jetson TX-2. This compiler does not support the offsetof() macro.
+-#if defined(__aarch64__) && !defined(GOOGLE_L4T)
++#if !defined(__aarch64__) && defined(GOOGLE_L4T)
+   // Call kernel optimized for depthwise convolutions using 3x3 filters if
+   // parameters are supported.
+   if (Fast3x3FilterKernelSupported(
+diff --git a/tensorflow/contrib/lite/kernels/internal/optimized/depthwiseconv_uint8_3x3_filter.h b/tensorflow/contrib/lite/kernels/internal/optimized/depthwiseconv_uint8_3x3_filter.h
+index 8cd7223..9461ef5 100644
+--- a/tensorflow/contrib/lite/kernels/internal/optimized/depthwiseconv_uint8_3x3_filter.h
++++ b/tensorflow/contrib/lite/kernels/internal/optimized/depthwiseconv_uint8_3x3_filter.h
+@@ -25,7 +25,7 @@ namespace optimized_ops {
+ 
+ // Enable for arm64 except for the Nvidia Linux 4 Tegra (L4T) running on
+ // Jetson TX-2. This compiler does not support the offsetof() macro.
+-#if defined(__aarch64__) && !defined(GOOGLE_L4T)
++#if defined(__aarch64__) && defined(GOOGLE_L4T)
+ 
+ // clang-format gets confused with this file and ends up formatting lines to
+ // be larger than 80 characters. Turn off here and back on at the end of the
