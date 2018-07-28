@@ -51,6 +51,16 @@ P.S. I recommend to donwload needed file, not use git clone. Using git clone wil
 
 ## Nvidia Jetson
 
+### From stable version of Tensorflow 1.10, I will use the JetPack 3.3
+
+
+### JetPack 3.2, TensorFlow 1.10-rc0  
+2018 7/28
+
+1. cuDNN 7.0			
+2. CUDA 9.0		
+3. Python 2.7	
+
 ### JetPack 3.2, TensorFlow 1.9  
 2018 7/11  
 
