@@ -53,6 +53,13 @@ P.S. I recommend to donwload needed file, not use git clone. Using git clone wil
 
 ### From stable version of Tensorflow 1.10, I will use the JetPack 3.3
 
+### JetPack 3.3, TensorFlow 1.10-rc1  
+2018 8/1
+
+1. cuDNN v7.1.5
+2. CUDA 9.0		
+3. Python 2.7	
+4. TensorRT 4.0 GA
 
 ### JetPack 3.2, TensorFlow 1.10-rc0  
 2018 7/28
