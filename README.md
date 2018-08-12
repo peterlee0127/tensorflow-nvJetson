@@ -43,30 +43,25 @@ P.S. I recommend to donwload needed file, not use git clone. Using git clone wil
 
 
 ## TensorRT
-[Using TensorRT in TensorFlow](https://github.com/tensorflow/tensorflow/blob/r1.7/tensorflow/contrib/tensorrt/README.md)
+[Using TensorRT in TensorFlow](https://github.com/tensorflow/tensorflow/blob/master/tensorflow/contrib/tensorrt/README.md)
 
 [Install  uff exporter for Jetson](https://github.com/NVIDIA-Jetson/tf_to_trt_image_classification#install)
 
+### TensorRT Test by TensorFlow
 
+[TensorRT test](https://github.com/tensorflow/tensorflow/tree/master/tensorflow/contrib/tensorrt/test)
 
 ## Nvidia Jetson
 
 ### From stable version of Tensorflow 1.10, I will use the JetPack 3.3
 
-### JetPack 3.3, TensorFlow 1.10-rc1  
-2018 8/1
+### JetPack 3.3, TensorFlow 1.10
+2018 8/13
 
 1. cuDNN v7.1.5
 2. CUDA 9.0		
-3. Python 2.7	
+3. Python 2.7	 and Python 3.5
 4. TensorRT 4.0 GA
-
-### JetPack 3.2, TensorFlow 1.10-rc0  
-2018 7/28
-
-1. cuDNN 7.0			
-2. CUDA 9.0		
-3. Python 2.7	
 
 ### JetPack 3.2, TensorFlow 1.9  
 2018 7/11  
