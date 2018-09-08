@@ -40,6 +40,20 @@ This script will download lastest build tensorflow in this repository.
 
 P.S. I recommend to donwload needed file, not use git clone. Using git clone will download all file in this repository.   
 
+## Use the NVIDIA Official build
+
+
+Python 2.7
+```
+pip install --extra-index-url=https://developer.download.nvidia.com/compute/redist/jp33 tensorflow-gpu
+```
+
+Python 3.5
+```
+pip3 install --extra-index-url=https://developer.download.nvidia.com/compute/redist/jp33 tensorflow-gpu
+```
+
+[Nvidia Forum](https://devtalk.nvidia.com/default/topic/1038957/jetson-tx2/tensorflow-for-jetson-tx2-/)
 
 
 ## TensorRT
