@@ -1,5 +1,5 @@
 #! /bin/sh
-FILE=tensorflow-1.9.0-cp35-cp35m-linux_aarch64.whl
+FILE=tensorflow-1.12.0-cp35-cp35m-linux_aarch64.whl
 wget https://github.com/peterlee0127/tensorflow-nvJetson/releases/download/binary/$FILE
 
 
