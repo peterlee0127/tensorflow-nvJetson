@@ -7,7 +7,7 @@ TensorFlow for Nvidia Jetson TX1/TX2.
 
 ## Setup Environment
 
-```
+```shell
 # Setting in .bashrc or .zshrc or other bash
 export PATH=/usr/local/cuda/bin:$PATH
 export LD_LIBRARY_PATH=/usr/local/cuda/lib64:$LD_LIBRARY_PATH
@@ -19,15 +19,26 @@ export LD_LIBRARY_PATH=/usr/local/cuda/extras/CUPTI/lib64:$LD_LIBRARY_PATH
 $ sudo apt install python3 python3-dev
 ```
 
-### Instal pip
-```
+### Install pip
+```shell
 $ wget https://bootstrap.pypa.io/get-pip.py -o get-pip.py
 $ sudo python3 get-pip.py
 
-$ sudo pip3 install numpy keras
+
 ```
 
+### Install numpy, keras
+
+```shell
+# requirements for numpy,keras
+$ sudo apt install libhdf5-dev
+$ sudo pip3 install numpy keras scipy
+```
+
+
+
 ## Install at Release
+
 ### You can download wheel file at [Release Page](https://github.com/peterlee0127/tensorflow-nvJetson/releases)
 
 
@@ -72,8 +83,6 @@ pip3 install --extra-index-url=https://developer.download.nvidia.com/compute/red
 [TensorRT test](https://github.com/tensorflow/tensorflow/tree/master/tensorflow/contrib/tensorrt/test)
 
 ## Nvidia Jetson
-
-### From stable version of Tensorflow 1.10, I will use the JetPack 3.3
 
 ### JetPack 3.3, TensorFlow 1.10
 2018 8/13
