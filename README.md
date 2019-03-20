@@ -6,19 +6,25 @@ TensorFlow for Nvidia Jetson TX1/TX2.
 ## Install Latest Build of Tensorflow 
 
 ## Setup Environment
+
 ```
 # Setting in .bashrc or .zshrc or other bash
 export PATH=/usr/local/cuda/bin:$PATH
 export LD_LIBRARY_PATH=/usr/local/cuda/lib64:$LD_LIBRARY_PATH
 
-#sudo apt-get install libcupti-doc
+$ sudo apt-get install libcupti-doc
 export LD_LIBRARY_PATH=/usr/local/cuda/extras/CUPTI/lib64:$LD_LIBRARY_PATH
+
+# Install python
+$ sudo apt install python3 python3-dev
 ```
 
 ### Instal pip
 ```
 $ wget https://bootstrap.pypa.io/get-pip.py -o get-pip.py
-$ sudo python get-pip.py
+$ sudo python3 get-pip.py
+
+$ sudo pip3 install numpy keras
 ```
 
 ## Install at Release
@@ -136,7 +142,7 @@ config = tf.ConfigProto()
 config.gpu_options.allow_growth = True
 
 session = tf.Session(config=config, ...)
-```	
+```
 
 
 ### Install
