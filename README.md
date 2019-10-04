@@ -84,7 +84,12 @@ pip3 install --extra-index-url=https://developer.download.nvidia.com/compute/red
 
 ## Nvidia Jetson
 
+###  JetPack 4.2, Tensorflow 2.0.0
+
+2019 10/03
+
 ### JetPack 3.3, TensorFlow 1.10
+
 2018 8/13
 
 1. cuDNN v7.1.5
