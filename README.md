@@ -17,6 +17,9 @@ export LD_LIBRARY_PATH=/usr/local/cuda/extras/CUPTI/lib64:$LD_LIBRARY_PATH
 
 # Install python
 $ sudo apt install python3 python3-dev
+
+# Install hdf5
+$ sudo apt-get install pkg-config libhdf5-100 libhdf5-dev
 ```
 
 ### Install pip
