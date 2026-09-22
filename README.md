@@ -1,9 +1,9 @@
 # tensorflow-nvJetson
-TensorFlow for Nvidia Jetson TX1/TX2.   
+TensorFlow builds, patches, and test scripts for NVIDIA Jetson TX1/TX2.
+
+These instructions document legacy JetPack 3.2, 3.3, and 4.2 environments. Choose a wheel that matches your JetPack and Python versions; the packages below are not intended as a general installation guide for newer JetPack releases.
 
 <img src='./jetson.jpg' width='100%'>
-
-## Install Latest Build of Tensorflow 
 
 ## Setup Environment
 
@@ -21,7 +21,7 @@ $ sudo apt install python3 python3-dev
 
 ### Install pip
 ```shell
-$ wget https://bootstrap.pypa.io/get-pip.py -o get-pip.py
+$ wget https://bootstrap.pypa.io/get-pip.py -O get-pip.py
 $ sudo python3 get-pip.py
 
 
@@ -37,9 +37,11 @@ $ sudo pip3 install numpy keras scipy
 
 
 
-## Install at Release
+## Install a Release Build
 
-### You can download wheel file at [Release Page](https://github.com/peterlee0127/tensorflow-nvJetson/releases)
+Download a compatible wheel from the [Release Page](https://github.com/peterlee0127/tensorflow-nvJetson/releases).
+
+The helper commands below download **TensorFlow 1.12.0 for Python 3.5 (Linux aarch64)**. They do not install the wheel automatically.
 
 
 #### Install by curl
@@ -52,13 +54,18 @@ sh -c "$(curl -fsSL https://tfjetson.peterlee0127.com/installTF.sh)"
 sh -c "$(wget https://tfjetson.peterlee0127.com/installTF.sh -O -)"
 ```
 
-This script will download lastest build tensorflow in this repository.
+After the download finishes, install the wheel using Python 3.5:
+
+```shell
+python3.5 -m pip install ./tensorflow-1.12.0-cp35-cp35m-linux_aarch64.whl
+```
 
 
-P.S. I recommend to donwload needed file, not use git clone. Using git clone will download all file in this repository.   
+Download only the wheel you need; cloning the repository is not required for installation.
 
-## Use the NVIDIA Official build
+## Use the NVIDIA Official Build (JetPack 3.3)
 
+The following commands are historical examples for JetPack 3.3.
 
 Python 2.7
 ```
@@ -73,6 +80,20 @@ pip3 install --extra-index-url=https://developer.download.nvidia.com/compute/red
 [Nvidia Forum](https://devtalk.nvidia.com/default/topic/1038957/jetson-tx2/tensorflow-for-jetson-tx2-/)
 
 
+## Verify the Installation
+
+Run the GPU test that matches your installed TensorFlow major version from the repository root (use the Python interpreter where TensorFlow is installed):
+
+```shell
+# TensorFlow 1.x with Python 3
+python3 tf-test/1.0/gpu.py
+
+# TensorFlow 2.0 with Python 3
+python3 tf-test/2.0/gpu.py
+```
+
+For a Python 2.7 wheel, use `python2.7 tf-test/1.0/gpu.py`. Check the device placement logs to confirm that operations run on the GPU. The TensorFlow 2.0 test also prints whether a GPU is available.
+
 ## TensorRT
 [Using TensorRT in TensorFlow](https://github.com/tensorflow/tensorflow/blob/master/tensorflow/contrib/tensorrt/README.md)
 
@@ -82,7 +103,7 @@ pip3 install --extra-index-url=https://developer.download.nvidia.com/compute/red
 
 [TensorRT test](https://github.com/tensorflow/tensorflow/tree/master/tensorflow/contrib/tensorrt/test)
 
-## Nvidia Jetson
+## NVIDIA Jetson
 
 ###  JetPack 4.2, Tensorflow 2.0.0
 
